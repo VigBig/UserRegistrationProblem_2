@@ -67,7 +67,7 @@ public class UserRegistration {
 
     public void passwordRule(String password){
 
-        String PasswordPattern="^[a-zA-Z0-9~!@#$]{8,}$";
+        String PasswordPattern="^(?=.*[A-Z])[a-zA-Z0-9@#$%^&+]{8,}$";
 
         Pattern pattern4=Pattern.compile(PasswordPattern);
         Matcher matcher4=pattern4.matcher(password);
@@ -76,7 +76,7 @@ public class UserRegistration {
         if(result4==true){
             System.out.println("Password is valid");
         }else{
-            System.out.println("Invaild, minimum 8 characters required.");
+            System.out.println("Invaild password, minimum 8 characters required with atleast 1 of them being upper case.");
         }
 
     }
