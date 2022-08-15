@@ -100,38 +100,38 @@ public class UserRegistration {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to User Registration Problem:");
-        UserRegistration ur = new UserRegistration();
+        UserRegistration userRegistration = new UserRegistration();
 
         System.out.println("Enter First Name:");
         String firstName = scanner.next();
-        ur.firstName(firstName);
+        userRegistration.firstName(firstName);
 
         System.out.println("Enter Last Name:");
         String lastName = scanner.next();
-        ur.lastName(lastName);
+        userRegistration.lastName(lastName);
 
         System.out.println("Enter your Email:");
         String email = scanner.next();
-        ur.email(email);
+        userRegistration.email(email);
 
         System.out.println("Enter your Mobile number:");
         String mobileNumber = scanner.next();
-        ur.mobileNumber(mobileNumber);
+        userRegistration.mobileNumber(mobileNumber);
 
         System.out.println("Enter your Password:");
         String password=scanner.next();
-        ur.passwordRule(password);
+        userRegistration.passwordRule(password);
 
         System.out.println("Email sample validation: ");
-        ur.emailSampleValidation("abc@yahoo.com");
-        ur.emailSampleValidation("abc-100@yahoo.com");
-        ur.emailSampleValidation("abc.100@yahoo.com");
-        ur.emailSampleValidation("abc111@abc.com");
-        ur.emailSampleValidation("abc-100@abc.net");
-        ur.emailSampleValidation("abc.100@abc.com.au");
-        ur.emailSampleValidation("abc@1.com");
-        ur.emailSampleValidation("abc@gmail.com.com");
-        ur.emailSampleValidation("abc+100@gmail.com");
+        userRegistration.emailSampleValidation("abc@yahoo.com");
+        userRegistration.emailSampleValidation("abc-100@yahoo.com");
+        userRegistration.emailSampleValidation("abc.100@yahoo.com");
+        userRegistration.emailSampleValidation("abc111@abc.com");
+        userRegistration.emailSampleValidation("abc-100@abc.net");
+        userRegistration.emailSampleValidation("abc.100@abc.com.au");
+        userRegistration.emailSampleValidation("abc@1.com");
+        userRegistration.emailSampleValidation("abc@gmail.com.com");
+        userRegistration.emailSampleValidation("abc+100@gmail.com");
 
 
     }
