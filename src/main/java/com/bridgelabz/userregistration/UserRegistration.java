@@ -66,7 +66,7 @@ public class UserRegistration {
 
     public void passwordRule(String password){
 
-        String PasswordPattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()<>:{},.;'])[A-Za-z0-9~!@#$%^&*()<>:{},.;']{8,}$";
+        String PasswordPattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[~!@#$%^&*()<>:{},.;'])[A-Za-z0-9~!@#$%^&*()<>:{},.;']{8,}$";
 
         Pattern pattern4=Pattern.compile(PasswordPattern);
         Matcher matcher4=pattern4.matcher(password);
@@ -80,7 +80,13 @@ public class UserRegistration {
 
     }
 
+    public void emailSampleValidation(String emailSample) {
 
+        System.out.println("Checking for Email sample: "+emailSample);
+
+        email(emailSample);
+
+    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -108,5 +114,19 @@ public class UserRegistration {
         String password=scanner.next();
         ur.passwordRule(password);
 
+        System.out.println("Email sample validation: ");
+        ur.emailSampleValidation("abc@yahoo.com");
+        ur.emailSampleValidation("abc-100@yahoo.com");
+        ur.emailSampleValidation("abc.100@yahoo.com");
+        ur.emailSampleValidation("abc111@abc.com");
+        ur.emailSampleValidation("abc-100@abc.net");
+        ur.emailSampleValidation("abc.100@abc.com.au");
+        ur.emailSampleValidation("abc@1.com");
+        ur.emailSampleValidation("abc@gmail.com.com");
+        ur.emailSampleValidation("abc+100@gmail.com");
+
+
     }
+
+
 }
