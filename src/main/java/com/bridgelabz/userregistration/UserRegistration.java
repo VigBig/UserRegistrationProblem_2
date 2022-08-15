@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-    public void firstName(String firstName) {
+    public boolean firstName(String firstName) {
 
         String firstNamePattern = "^[A-Z]{1}[a-z]{2,}$";
 
@@ -16,12 +16,13 @@ public class UserRegistration {
         if(result == true){
             System.out.println("First Name is valid.");
         }
-
         else
             System.out.println("First Name is not valid.");
+
+        return result;
     }
 
-    public void lastName(String lastName) {
+    public boolean lastName(String lastName) {
 
         String lastNamePattern = "^[A-Z]{1}[a-z]{2,}$";
 
@@ -33,9 +34,11 @@ public class UserRegistration {
             System.out.println("Last Name is valid.");
         else
             System.out.println("Last Name is not valid.");
+
+        return result;
     }
 
-    public void email(String email){
+    public boolean email(String email){
         String emailPattern= "^[a-zA-Z0-9]+[.+-]{0,1}[0-9a-zA-Z]*@[a-z0-9]+[.][a-z]{2,4}[.a-z]{0,4}$";
 
         Pattern pattern2=Pattern.compile(emailPattern);
@@ -47,9 +50,11 @@ public class UserRegistration {
         }else{
             System.out.println("Email is not valid.");
         }
+
+        return result2;
     }
 
-    public void mobileNumber(String mobileNumber) {
+    public boolean mobileNumber(String mobileNumber) {
 
         String MobileNumberPattern = "^(91-)?[0-9]{10}$";
 
@@ -62,9 +67,11 @@ public class UserRegistration {
         } else {
             System.out.println("Mobile number is not valid");
         }
+
+        return result3;
     }
 
-    public void passwordRule(String password){
+    public boolean passwordRule(String password){
 
         String PasswordPattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[~!@#$%^&*()<>:{},.;'])[A-Za-z0-9~!@#$%^&*()<>:{},.;']{8,}$";
 
@@ -78,6 +85,7 @@ public class UserRegistration {
             System.out.println("Invaild password,minimum 8 characters required with atleast 1 of them being upper case and atleast 1 of them being a number and exactly 1 of them being a special character.");
         }
 
+        return result4;
     }
 
     public void emailSampleValidation(String emailSample) {
